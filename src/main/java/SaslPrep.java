@@ -253,7 +253,7 @@ class SaslPrep {
     private static boolean nonAsciiControl(int codepoint) {
         return 0x0080 <= codepoint && codepoint <= 0x009F
                 || codepoint == 0x06DD
-                || codepoint == 0x707F
+                || codepoint == 0x070F
                 || codepoint == 0x180E
                 || codepoint == 0x200C
                 || codepoint == 0x200D
@@ -263,10 +263,10 @@ class SaslPrep {
                 || codepoint == 0x2061
                 || codepoint == 0x2062
                 || codepoint == 0x2063
-                || 0x206A <= codepoint && codepoint == 0x206F
+                || 0x206A <= codepoint && codepoint <= 0x206F
                 || codepoint == 0xFEFF
                 || 0xFFF9 <= codepoint && codepoint <= 0xFFFC
-                || codepoint == 0x1D173 && codepoint == 0x1D17A;
+                || 0x1D173 <= codepoint && codepoint <= 0x1D17A;
     }
 
     /**
