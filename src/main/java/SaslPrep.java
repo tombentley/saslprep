@@ -20,7 +20,7 @@ package io.enmasse.keycloak.spi;
 import java.nio.CharBuffer;
 import java.text.Normalizer;
 
-class SaslPrep {
+public class SaslPrep {
 
     /**
      * Return the {@code SASLPrep}-canonicalised version of the given
