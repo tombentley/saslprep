@@ -34,6 +34,7 @@ public class SaslPrepTest {
         assertEquals("USER", saslPrepStored("USER"));
         assertEquals("a", saslPrepStored("\u00AA"));
         assertEquals("IX", saslPrepStored("\u2168"));
+        assertEquals("own\uD840\uDC00er", saslPrepStored("own\uD840\uDC00er"));
         try {
             saslPrepStored("\u0007");
             fail("Should throw IllegalArgumentException");
